@@ -1,0 +1,90 @@
+* {
+  /* seletor universal */
+  margin: 0;
+}
+
+html,
+body {
+  -black: hsl(240, 6%, 13%);
+  --gray: hsl(240, 9%, 89%);
+  /* os dois tracinhos -- significa que é uma variavel, assim para essas cores eu vou usar a variável */
+
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  display: grid; /*maneira de vizualização dos elementos, trabalha em dois eixos vertical e horizontal */
+  place-items: center; /*centraliza os elementos */
+}
+
+main {
+  background: url(images/background.svg);
+  width: 375px; /* px é uma unidade de medida fixa */
+  height: 812px;
+}
+
+.container {
+  max-width: 250px;
+  margin-left: auto; /*espaços laterais */
+  margin-right: auto;
+  text-align: center;
+  color: var(--gray);
+}
+
+.avatar {
+  width: 10rem; /* O rem tem uma relação com o pixel padrão da página */
+  margin: 11.5rem auto 0; /* A ordem das margins são top(11.5rem), laterais(auto) e bottom(0) */
+  position: relative; /* com esse comando essa imagem é o detenter da posistion absolute */
+}
+
+.avatar span {
+  position: absolute; /* permite criar níveis de empilhamento entre as imagens*/
+  top: -15px;
+  z-index: 1; /* volta o nível, ou seja, a profundidade da imagem (por isso a letra z = eixo z = profundidade) */
+}
+
+.avatar > img {
+  /* o sinal de > pega a imagem que está no primeiro nível */
+  width: 10rem;
+  height: 11.5rem;
+  object-fit: cover; /* imagem se adpata ao tamanho definido */
+
+  clip-path: polygon(
+    50% 0,
+    100% 25%,
+    100% 75%,
+    50% 100%,
+    0 75%,
+    0 25%
+  ); /* para criar o poligono */
+}
+
+h1 {
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+a {
+  color: var(--gray);
+  text-decoration: none;
+  margin-top: 0.25rem;
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  align-items: center;
+}
+
+p {
+  margin-top: 2rem;
+}
+
+ul {
+  margin-top: 4rem;
+  list-style: none; /* para tirar as bolinhas */
+  padding: 0;
+  display: flex; /* faz com que os elementos fiquem um ao lado do outro */
+  gap: 0.5rem; /* espaço entre os icones */
+  justify-content: center; /* centraliza o flex; o text-align só serve para texto como usamos o display flex ele n recebe essa propriedade de texto */
+}
