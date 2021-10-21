@@ -1,44 +1,74 @@
 <!DOCTYPE html>
-<!-- regra para definir q estanos usando HTML5 -->
 
 <html>
-  <!-- Tag raíz/ tag pai / nó-->
   <head>
-    <title>Camimla Cristina - NLW Heat 2021</title>
-    <!-- nome na página no no navegador -->
+    <title>Camila Cristina - NLW Heat 2021</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+
   </head>
-  <!-- tag filha -->
-  <style>
-    /* 
-    Cascating Stylesheet, é uma folha de estilo em cascata. O elemento que entra por último é o elemento que tem mais força.
-    */
-
-    html,
-    body {
-      height: 100%;
-    }
-
-    body {
-      display: grid; /*maneira de vizualização dos elementos */
-      place-items: center; /*centraliza os elementos */
-      background: rgb(150, 212, 233);
-    }
-
-    h1 {
-      font-size: 1.5rem;
-    }
-
-    a {
-      color: black;
-      text-decoration: none;
-    }
-  </style>
 
   <body>
-    <h1>Camila Cristina</h1>
-    <!-- deixar um texto grande e grosso -->
-    <a href="https://instagram.com/camilacris.oa">@camilacris.oa</a>
-    <!-- é um hiperlink, aqui criou um hiperlink para o meu instagram-->
+    <main>
+      <div class="container">
+        <div class="avatar">
+        <span>
+           <img src="images/build.svg" alt="Selo Rocketseat" />
+        </span>       
+        <img src="https://lorempixel.com/185/185/people/" alt="Foto pessoal" />
+        <!-- 
+          Essas duas imagens fecham nelas mesmas e possuem dois atributos;
+          src(onde está a imagem, endereço); 
+          alt(alternativo, caso não encontre a imagem ele vai apresentar o texto da alternativa; tbm é importante para acessibilidade)
+        -->
+      </div>
+
+        <h1>Camila Cristina</h1>
+        <a href="https://instagram.com/camilacris.oa">
+          <img src="images/github.svg" alt="ícone github" />
+          camilacris.oa</a
+        >
+
+        <p>An instructor focused on helping pople start programming for web</p>
+
+        <ul>
+          <!-- estrutura de lista; ul = lista não ordenada; cada elemento está em uma tag li -->
+          <li>
+            <a href="https://youtube.com/maykbrito">
+            <img src="images/youtube.svg" alt="ícone YouTuve" target="_blank" />
+            <!-- target="_blank" assim ao clicar o link abre em uma nova página-->
+            </a>
+          </li>
+          <li>
+            <a href="https://facebook.com/camilacristina"></a>
+            <img
+              src="images/facebook.svg"
+              alt="ícone YouTuve"
+              target="_blank" />
+            </a>
+          </li>
+          <li>
+            <a href="https://instagram.com/camilacris.oa">
+            <img
+              src="images/instagram.svg"
+              alt="ícone YouTuve"
+              target="_blank"
+            />
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/camilacristina">
+            <img src="images/twitter.svg" alt="ícone YouTuve" target="_blank" />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </main>
   </body>
-  <!-- tag filha -->
 </html>
