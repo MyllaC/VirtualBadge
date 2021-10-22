@@ -23,20 +23,24 @@
           <span>
             <img src="images/build.svg" alt="Selo Rocketseat" />
           </span>
-          <img src="images/foto_pessoal.jpg" alt="Foto pessoal" />
+          <img
+            id="userImage"
+            src="images/foto_pessoal.jpg"
+            alt="Foto pessoal"
+          />
           <!-- 
           Essas duas imagens fecham nelas mesmas e possuem dois atributos;
           src(onde está a imagem, endereço); 
           alt(alternativo, caso não encontre a imagem ele vai apresentar o texto da alternativa; tbm é importante para acessibilidade)
         --></div>
 
-        <h1 id="userName">Camila Cristina</h1>
-        <a href="https://github.com/MyllaC" target="_blank">
+        <h1 id="userName">User Name</h1>
+        <a id="userLink" href="https://github.com/MyllaC" target="_blank">
           <img src="images/github.svg" alt="ícone github" />
-          CamilaCristina
+          <span id="userGitHub"> Camila Cristina </span>
         </a>
 
-        <p>
+        <p id="userBio">
           On the journey to the next level! Currently learning JavaScript, CSS
           and HTML.
         </p>
@@ -74,31 +78,7 @@
       </div>
     </main>
 
-    <script> //trocar o nome de usuário das redes socias usando JavaScript
-      const linksSocialMedia = {
-        github: 'MyllaC',
-        youtube: 'channel/UCQ3JwhaZjHZ1FlFcDFcqn8A',
-        facebook: 'camila.cristina.7545708',
-        instagram: 'camilacris.oa',
-        twitter: 'Cris_Camila'
-      }
-
-      function changeSocialMediaLinks() {
-        /*document.getElementById('userName').textContent = 'Camila'
-        o textContent permite acessar o conteúdo do elemento e substituir por outro
-        userName.textContent = 'Camila Cristina' 
-        esse comando substitui o anterior, só tem como fazer isso com ID*/
-        /* o controlador que é o li é referente a cada filho que existe dentro do elemento HTML socialLinks */
-        for (let li of socialLinks.children) {
-          const social = li.getAttribute('class')
-          li.children[0].href = `https://www.${social}.com/${linksSocialMedia[social]}`
-
-          alert(li.children[0].href)
-        }
-      }
-
-      changeSocialMediaLinks()
-    </script>
+    <script src="main.js"></script>
   </body>
 </html>
 
